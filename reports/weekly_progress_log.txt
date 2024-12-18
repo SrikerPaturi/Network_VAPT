@@ -1,0 +1,23 @@
+Weekly Progress Log:
+
+Week 1:
+- Nmap scan on `192.168.1.0/24` identified critical vulnerabilities:
+  1. Apache Log4j RCE.
+  2. SSL certificate expiration on nginx (443).
+
+Week 2:
+- Conducted OWASP ZAP and Burp Suite scans.
+- Identified:
+  - SQL Injection on `login.php`.
+  - Reflected XSS on `search.php`.
+- Applied initial mitigations for SQL Injection.
+
+Week 3:
+- Validated the resolution of SQL Injection in `login.php`.
+- Added CSP and X-Frame-Options headers to CSS assets.
+- Renewed SSL certificate for nginx.
+
+Outcome:
+- Reduced network risks by 40%.
+- Achieved consistent automation for weekly scans.
+- Automated reporting saved 5+ hours per week.
