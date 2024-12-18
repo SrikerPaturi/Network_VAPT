@@ -1,0 +1,25 @@
+Mitigation Report:
+
+1. **SQL Injection (Critical)**
+   - Affected File: `login.php`
+   - Suggested Fixes:
+     - Implement parameterized queries.
+     - Apply strict input validation using regex.
+
+2. **Reflected XSS (High)**
+   - Affected File: `search.php`
+   - Suggested Fixes:
+     - Encode user input and sanitize HTML responses.
+     - Apply CSP headers to restrict inline scripts.
+
+3. **SSL Certificate Issue (Medium)**
+   - Affected Host: `192.168.1.2` (nginx)
+   - Suggested Fixes:
+     - Renew SSL certificate.
+     - Regularly audit TLS configurations.
+
+4. **Apache Log4j Vulnerability (Critical)**
+   - Affected Host: `192.168.1.1`
+   - Suggested Fixes:
+     - Update Apache to the latest version.
+     - Review all instances of Log4j dependencies.
