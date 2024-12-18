@@ -1,0 +1,18 @@
+Burp Suite Vulnerability Analysis:
+
+High Severity:
+1. SQL Injection detected in `login.php` (Parameter: username).
+   - Exploitable using payload: `' OR '1'='1'; --`
+   - Database error exposed: `You have an error in your SQL syntax`.
+
+2. Reflected XSS in `search.php` (Parameter: query).
+   - Payload: `<script>alert('XSS')</script>` executed successfully.
+
+Medium Severity:
+1. Missing security headers in CSS assets:
+   - Content-Security-Policy (CSP) not enforced.
+   - X-Frame-Options not present.
+
+General Observations:
+- PUT/DELETE HTTP methods are enabled on `/uploads`.
+  Recommendation: Restrict methods to specific users.
