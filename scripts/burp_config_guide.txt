@@ -1,0 +1,28 @@
+### Burp Suite Proxy Configuration Guide
+
+1. **Launch Burp Suite**:
+   - Open Burp Suite Community Edition or Professional.
+
+2. **Configure Proxy Listener**:
+   - Navigate to the "Proxy" tab and select "Options".
+   - Ensure a proxy listener is running on `127.0.0.1:8080`.
+
+3. **Set Up Browser Proxy**:
+   - Configure your browser's proxy settings to route traffic through Burp Suite:
+     - **Host**: `127.0.0.1`
+     - **Port**: `8080`
+
+4. **Install Burp Certificate**:
+   - Visit `http://burp` in your browser while connected to the proxy.
+   - Download and install the Burp CA certificate.
+   - Follow your browser's instructions to trust the certificate.
+
+5. **Test Configuration**:
+   - Open any website and ensure HTTP requests appear under "Proxy > HTTP history" in Burp Suite.
+
+6. **Use Tools for Testing**:
+   - Utilize the "Intruder" or "Repeater" tools for manual testing.
+   - Test input fields for vulnerabilities like XSS and SQL Injection.
+
+7. **Save Project**:
+   - Regularly save your work using the "Save Project" option under "File" to retain session data and results.
